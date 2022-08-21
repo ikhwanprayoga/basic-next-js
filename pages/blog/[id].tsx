@@ -1,4 +1,3 @@
-import { useRouter } from 'next/router';
 import Layout from "../../components/Layout";
 
 interface Blog {
@@ -34,10 +33,10 @@ export async function getStaticPaths() {
     params: {
       id: `${r.id}`
     }
-  })) 
+  }));
   return {
     paths,
-    fallback: true
+    fallback: false
   }
 }
 
